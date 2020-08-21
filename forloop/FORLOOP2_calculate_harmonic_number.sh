@@ -1,0 +1,3 @@
+#!/bin/bash
+
+read -p "Enter the last harmonic number of the series : " nfor (( counter=1; counter<=n; counter++ ))do	if [ $counter -eq 1 ]	then	value=1				#Calculate first harmonic number	else	fraction=`echo " 1/$counter"| bc -l ` 		#Calculate subsequent harmonic numbers building up on first	value=`echo "$value + $fraction " | bc -l ` 	#Update total value of harmonic numbers	fidoneecho " The value of the harmonic series is $value "	#Print final value
